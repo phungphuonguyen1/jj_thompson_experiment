@@ -1,0 +1,4 @@
+streamlit
+openai
+matplotlib==3.5.3
+langchain
