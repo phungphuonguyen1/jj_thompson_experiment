@@ -8,8 +8,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Config function
-#img=Image.open("nano.jpg")
-#st.set_page_config(page_title='Nanoparticles distribution prediction',page_icon=img)
+st.set_page_config(page_title='JJ_Thompson',page_icon="🤘")
 
 # hide main menu and footer
 hide_menu_style= """
@@ -55,6 +54,24 @@ with st.sidebar:
     """
     st.markdown(info_box, unsafe_allow_html=True)
 
+st.markdown(
+    '''
+    <style>
+    .streamlit-expanderHeader {
+        background-color: lightblue;
+        color: black; # Adjust this for expander header color
+        border-radius: 20px;
+        text-align:center;
+    }
+    .streamlit-expanderContent {
+        background-color: white;
+        color: black; # Expander content color
+    }
+    </style>
+    ''',
+    unsafe_allow_html=True
+)
+
 
 # function take input from user in sidebar
 def user_input_features():
@@ -91,23 +108,6 @@ ls1="""<ul>
         <li>Distance: range should be small (less than length of polymer chain)</li>
     </ul>"""
 
-st.markdown(
-    '''
-    <style>
-    .streamlit-expanderHeader {
-        background-color: lightblue;
-        color: black; # Adjust this for expander header color
-        border-radius: 20px;
-        text-align:center;
-    }
-    .streamlit-expanderContent {
-        background-color: white;
-        color: black; # Expander content color
-    }
-    </style>
-    ''',
-    unsafe_allow_html=True
-)
 
 with st.expander("Input explaination"):
     st.markdown(ls1,unsafe_allow_html=True)
